@@ -1,0 +1,49 @@
+﻿<div asp-validation-summary="All"></div>
+@model IndexViewModel
+ <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class='split'>
+                    <h3>Register</h3>
+                    <form method="post" action='register'>
+                        <div class="form-group">
+                            <label asp-for="NewUser.FirstName"  for="exampleFormControlInput1">First Name:</label>
+                            <input asp-for="NewUser.FirstName"  name='first_name' type="text" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="NewUser.LastName"  for="exampleFormControlInput1">Last Name:</label>
+                            <input asp-for="NewUser.LastName" name='last_name' type="text" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="NewUser.Email" for="exampleFormControlInput1">Email:</label>
+                            <input asp-for="NewUser.Email" name='email' type="email" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="NewUser.Password"  for="exampleFormControlInput1">Password:</label>
+                            <input asp-for="NewUser.Password" name='password' type="password" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="NewUser.ConfirmPassword" for="exampleFormControlInput1">Confirm Password:</label>
+                            <input asp-for="NewUser.ConfirmPassword" name='c_password' type="password" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                        <input type='submit' class='btn btn-primary' value="Add NewUser">
+                    </form>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="split">
+                    <h3>Login</h3>
+                    <form method="post" action='login'>
+                        <div class="form-group">
+                            <label asp-for="User.email" for="exampleFormControlInput1">Email:</label>
+                            <input asp-for="User.email" name='email_log' type="text" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="User.password" for="exampleFormControlInput1">Password:</label>
+                            <input asp-for="User.password" name='password_log' type="password" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                        <input type='submit' class='btn btn-primary' value="Add User">
+                    </form>
+                </div>
+            </div>
+        </div>
